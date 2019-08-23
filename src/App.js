@@ -33,12 +33,20 @@ class Clock extends Component {
     render() {
         return (
             <div id="container">
-                <h1>My Clock</h1>
+                <h1>My Clock Radio</h1>
                 <h2>The current time is:</h2>
                 <div id="clock">
+                    <div id="power-toggle" className="button"></div>
+                    <div className="spacer-top"></div>
+                    <div id="modulation-toggle" className="button"></div>
                     <div id="clock-body">
+                        <div className="speaker"></div>
                         <p id="clock-face">{this.state.time.toLocaleTimeString()}</p>
+                        <div className="speaker"></div>
                     </div>
+                    <div className="foot"></div>
+                    <div id="spacer-bottom"></div>
+                    <div className="foot"></div>
                 </div>
             </div>
         )
