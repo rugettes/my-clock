@@ -1,33 +1,69 @@
-.App {
-  text-align: center;
+#container {
+    width: 700px;
+    margin: auto;
+    text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#clock-body {
+    padding: 10px;
+    background: red;
+    display: flex;
+    border: 5px outset #AF0000;
+    border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#clock-face {
+    margin: auto;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 4em;
+    background: black;
+    color: #2eff00;
+    padding: 20px;
+    border: 10px inset gray;
+    align-self: auto;
 }
 
-.App-link {
-  color: #61dafb;
+#spacer-bottom {
+    display: inline-block;
+    width: 300px;
+    padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+    margin-top: 25px;
+    height: 10px;
+    width: 50px;
+    background: #AAAAAA;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: bottom;
+    border-right: solid thick #D3D3D3;
+    border-left: solid rgb(85, 85, 85);
+    border-top: solid thin #7a7a7a;
+    border-radius: 5px 5px 0 0;
+}
+
+.spacer-top {
+    display: inline-block;
+    width: 100px;
+    padding: 0;
+}
+
+.speaker {
+    width: 125px;
+    background: red;
+    background-image: radial-gradient(#2C2C2C 10%, transparent 0), 
+    radial-gradient(#2C2C2C 10%, transparent 0);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    border: solid 5px red;
+    align-self: auto;
+}
+
+.foot {
+    height: 10px;
+    width: 75px;
+    background: #2C2C2C;
+    display: inline-block;
+    vertical-align: top;
 }

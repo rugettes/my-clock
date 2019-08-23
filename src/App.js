@@ -13,7 +13,9 @@ class App extends Component {
 
 class Clock extends Component {
     state = {
-        time: new Date()
+        time: new Date(),
+        power: false,
+        modulation: 'FM'
     }
 
     componentDidMount() {
@@ -30,18 +32,36 @@ class Clock extends Component {
         })
     }
 
+    togglePower = () => {
+        this.setState({
+            power: !this.state.power
+        })
+    }
+
+    toggleModulation = () => {
+        if (this.state.modulation === 'FM') {
+            this.setState({
+                modulation: 'AM'
+            })
+        } else {
+            this.setState({
+                modulation: 'FM'
+            })
+        }
+    }
+
     render() {
         return (
             <div id="container">
                 <h1>My Clock Radio</h1>
                 <h2>The current time is:</h2>
                 <div id="clock">
-                    <div id="power-toggle" className="button"></div>
+                    <div id="power-toggle" className="button" onClick={ () => { this.togglePower() } }></div>
                     <div className="spacer-top"></div>
-                    <div id="modulation-toggle" className="button"></div>
+                    <div id="modulation-toggle" className="button" onClick={() => { this.toggleModulation() }}></div>
                     <div id="clock-body">
                         <div className="speaker"></div>
-                        <p id="clock-face">{this.state.time.toLocaleTimeString()}</p>
+                        <p id="clock-face">{ this.state.time.toLocaleTimeString() }</p>
                         <div className="speaker"></div>
                     </div>
                     <div className="foot"></div>
