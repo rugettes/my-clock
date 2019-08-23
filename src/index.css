@@ -7,7 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+#container {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+#clock p {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-weight: bold;
+    background: black;
+    color: green;
 }

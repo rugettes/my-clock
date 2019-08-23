@@ -32,9 +32,12 @@ class Clock extends Component {
 
     render() {
         return (
-            <div>
+            <div id="container">
                 <h1>My Clock</h1>
-                <h2>The current time is {this.state.time.toLocaleTimeString()}.</h2>
+                <h2>The current time is:</h2>
+                <div id="clock">
+                    <p>{this.state.time.toLocaleTimeString()}</p>
+                </div>
             </div>
         )
     }
