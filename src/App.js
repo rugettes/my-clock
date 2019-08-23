@@ -36,7 +36,9 @@ class Clock extends Component {
                 <h1>My Clock</h1>
                 <h2>The current time is:</h2>
                 <div id="clock">
-                    <p>{this.state.time.toLocaleTimeString()}</p>
+                    <div id="clock-body">
+                        <p id="clock-face">{this.state.time.toLocaleTimeString()}</p>
+                    </div>
                 </div>
             </div>
         )

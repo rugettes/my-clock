@@ -8,12 +8,21 @@ body {
 }
 
 #container {
-    width: 500px;
+    width: 600px;
     margin: auto;
     text-align: center;
 }
 
-#clock p {
+#clock-body {
+    padding: 10px;
+    background: red;
+    display: flex;
+    border: 5px outset #AF0000;
+    border-radius: 10px;
+}
+
+#clock-face {
+    margin: auto;
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
     font-size: 4em;
     font-weight: bold;
@@ -21,4 +30,5 @@ body {
     color: #2eff00;
     padding: 20px;
     border: 10px inset gray;
+    align-self: auto;
 }
