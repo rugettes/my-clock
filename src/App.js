@@ -12,10 +12,14 @@ class App extends Component {
 }
 
 class Clock extends Component {
+    state = {
+        time: new Date()
+    };
     render() {
         return (
             <div>
                 <h1>My Clock</h1>
+                <h2>The current time is {this.state.time.toLocaleTimeString()}.</h2>
             </div>
         );
     }
