@@ -15,7 +15,10 @@ body {
 
 #clock p {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 4em;
     font-weight: bold;
     background: black;
-    color: green;
+    color: #2eff00;
+    padding: 20px;
+    border: 10px inset gray;
 }
