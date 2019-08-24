@@ -18,6 +18,9 @@ class Clock extends Component {
         modulation: 'FM'
     }
 
+    amURL = new Audio('https://nis.stream.publicradio.org/nis.aac')
+    fmURL = new Audio('https://current.stream.publicradio.org/kcmp.aac')
+
     componentDidMount() {
         this.timer = setInterval(() => this.tick(), 1000)
     }
@@ -33,19 +36,32 @@ class Clock extends Component {
     }
 
     togglePower = () => {
-        this.setState({
-            power: !this.state.power
-        })
+        if (this.state.power) {
+            this.setState({ power: false }, () => {
+                this.amURL.pause()
+                this.fmURL.pause()
+            })
+        } else {
+            this.setState({ power: true }, () => {
+                this.state.modulation === 'AM' ? this.amURL.play() : this.fmURL.play()
+            })
+        }
     }
 
     toggleModulation = () => {
         if (this.state.modulation === 'FM') {
-            this.setState({
-                modulation: 'AM'
+            this.setState({ modulation: 'AM' }, () => {
+                if (this.state.power) {
+                    this.fmURL.pause()
+                    this.amURL.play()
+                }
             })
         } else {
-            this.setState({
-                modulation: 'FM'
+            this.setState({ modulation: 'FM' }, () => {
+                if (this.state.power) {
+                    this.amURL.pause()
+                    this.fmURL.play()
+                }
             })
         }
     }
