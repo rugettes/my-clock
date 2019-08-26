@@ -1,0 +1,10 @@
+#clock-face p {
+    margin: auto;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 4em;
+    background: black;
+    color: #2eff00;
+    padding: 20px;
+    border: 10px inset gray;
+    align-self: auto;
+}
