@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # To use the clock radio
 
-After running the project with `npm start`, please click the left button on the top of the clock to turn on the radio. If you'd like to toggle between music and talk radio, click the right button on the top of the clock. To turn the radio off entirely, click the left button again. Happy listening!
+After running the project with `npm start`, please click the left button on the top of the clock to turn the radio on. If you'd like to toggle between music and talk radio, click the right button on the top of the clock. To turn the radio off entirely, click the left button again. Happy listening!
 
 ## Available Scripts
 
